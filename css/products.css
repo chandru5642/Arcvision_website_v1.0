@@ -1,0 +1,115 @@
+
+/* Product Sections */
+.product {
+  max-width: 75rem; /* 1200px */
+  margin: var(--space-md) auto;
+  padding: var(--space-sm);
+  font-family: var(--font-main);
+}
+
+.product-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.product-content.left {
+  flex-direction: row;
+}
+
+.product-content.right {
+  flex-direction: row;
+}
+
+.product-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.product-text h2 {
+  font-size: 2rem;
+  color: var(--green-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.product-text p {
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.product-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-bold);
+}
+
+/* Grid Section (Optional if needed) */
+#our-products {
+  padding: var(--space-lg) var(--space-sm);
+  background: var(--white);
+  text-align: center;
+  font-family: var(--font-main);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.product-tile {
+  background: var(--gray-light);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.product-tile img {
+  width: 100px;
+  margin-bottom: var(--space-sm);
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-content {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .product-text,
+  .product-image {
+    width: 100%;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .product-text h2 {
+    font-size: 1.6rem;
+  }
+}
